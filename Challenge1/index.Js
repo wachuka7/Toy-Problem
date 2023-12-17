@@ -1,6 +1,7 @@
 function calculateGrade() {
     let marks = parseFloat(prompt("Enter student marks (0-100):"));
     if (isNaN(marks) || marks < 0 || marks > 100) {
+        console.log("Invalid input. Marks must be between 0 and 100.");
         return ("Invalid input. Marks must be between 0 and 100.");
     }
     let grade;
@@ -15,6 +16,7 @@ function calculateGrade() {
     } else {
         grade = 'E';
     }
-    return (`Student Grade: ${grade}`);
+    console.log(`Student Grade: ${grade}`);
+    return (`Student Grade: ${grade}`)
 }
 calculateGrade();
